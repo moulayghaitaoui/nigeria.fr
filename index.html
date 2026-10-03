@@ -66,8 +66,10 @@ body {
 /* Header */
 .main-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .header-content h1 {
@@ -489,10 +491,12 @@ tbody tr:hover {
 
     <div class="dashboard-container">
         <header class="glass-panel main-header">
-            <div class="header-content">
-                <h1><i class="fa-solid fa-earth-africa"></i> Tableau de Bord des Stagiaires - Niger</h1>
-
-                <p>Statistiques globales, filtrage et recherche dans les listes extraites</p>
+            <div style="text-align: center; margin-bottom: 20px; font-weight: bold; font-size: 1.2rem; color: var(--text-main);">
+                <div style="margin-bottom: 5px;">République Algérienne Démocratique et Populaire</div>
+                <div>Ministère de la Formation et de l'Enseignement Professionnels</div>
+            </div>
+            <div class="header-content" style="text-align: center;">
+                <h1>Tableau de Bord des Stagiaires - Niger</h1>
             </div>
             
         </header>
