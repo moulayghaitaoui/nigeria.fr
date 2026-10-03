@@ -491,7 +491,7 @@ tbody tr:hover {
         <header class="glass-panel main-header">
             <div class="header-content">
                 <h1><i class="fa-solid fa-earth-africa"></i> Tableau de Bord des Stagiaires - Niger</h1>
-                <p style="color: var(--primary-color); font-weight: bold; margin-top: 10px;">Dernière mise à jour : 2026-10-02 (Version corrigée pour Boumerdes)</p>
+
                 <p>Statistiques globales, filtrage et recherche dans les listes extraites</p>
             </div>
             
@@ -5673,7 +5673,7 @@ function renderStats() {
             for(var i=0; i<topLimit; i++) {
                 topList.push(`<strong>${specsArray[i].name}</strong> (${specsArray[i].count} stagiaires)`);
             }
-            topSpecsHtml = " وتتصدر قائمة Spécialités les plus Demandées وإقبالاً كل sur: " + topList.join(", et ") + ", reflétant l'alignement de nos programmes avec les besoins réels du marché et les attentes des partenaires.";
+            topSpecsHtml = " Les spécialités les plus demandées sont : " + topList.join(", et ") + ", reflétant l'alignement de nos programmes avec les besoins réels du marché et les attentes des partenaires.";
         }
 
         var summaryText = `Conformément aux Hautes Orientations de Monsieur le Président de la République, Abdelmadjid Tebboune, et dans le cadre du renforcement des liens de coopération bilatérale et du partenariat stratégique efficace qui unit la République Algérienne Démocratique et Populaire à la République sœur du Niger, nous avons le plaisir de vous présenter ce bilan statistique exhaustif et minutieux des stagiaires nigériens bénéficiant du système national de formation professionnelle.
@@ -5772,7 +5772,7 @@ Ce bilan sur le terrain n'est pas une simple compilation de chiffres, mais plut�
                         var specStats = wData.specialities[spec];
                         var genderInfo = '';
                         if (specStats.M > 0 && specStats.F > 0) {
-                            genderInfo = ' <br><small style="color:var(--text-muted)">(ذكور: ' + specStats.M + '، إناث: ' + specStats.F + ')</small>';
+                            genderInfo = ' <br><small style="color:var(--text-muted)">(Hommes: ' + specStats.M + ', Femmes: ' + specStats.F + ')</small>';
                         } else if (specStats.M > 0) {
                             genderInfo = ' <br><small style="color:var(--text-muted)">(Hommes uniquement)</small>';
                         } else if (specStats.F > 0) {
@@ -5784,13 +5784,13 @@ Ce bilan sur le terrain n'est pas une simple compilation de chiffres, mais plut�
                 
                 detailedHtml += `
                     <div class="wilaya-card glass-panel">
-                        <h3 class="wilaya-title"><i class="fa-solid fa-location-dot"></i> ولاية ${wName}</h3>
+                        <h3 class="wilaya-title"><i class="fa-solid fa-location-dot"></i> Wilaya ${wName}</h3>
                         <div class="wilaya-summary">
-                            <div class="w-stat">إجمالي: <strong>${wData.total}</strong></div>
-                            <div class="w-stat">ذكور: <strong>${wData.M}</strong></div>
-                            <div class="w-stat">إناث: <strong>${wData.F}</strong></div>
+                            <div class="w-stat">Total: <strong>${wData.total}</strong></div>
+                            <div class="w-stat">Hommes: <strong>${wData.M}</strong></div>
+                            <div class="w-stat">Femmes: <strong>${wData.F}</strong></div>
                         </div>
-                        <h4 class="spec-title">Spécialitéات:</h4>
+                        <h4 class="spec-title">Spécialités:</h4>
                         <div class="spec-list">
                             ${specHtml}
                         </div>
@@ -5818,7 +5818,7 @@ Ce bilan sur le terrain n'est pas une simple compilation de chiffres, mais plut�
                 
                 var genderSummary = '';
                 if (sData.M > 0 && sData.F > 0) {
-                    genderSummary = `ذكور: <strong>${sData.M}</strong> | إناث: <strong>${sData.F}</strong>`;
+                    genderSummary = `Hommes: <strong>${sData.M}</strong> | Femmes: <strong>${sData.F}</strong>`;
                 } else if (sData.M > 0) {
                     genderSummary = `Hommes uniquement (<strong>${sData.M}</strong>)`;
                 } else if (sData.F > 0) {
@@ -5834,7 +5834,7 @@ Ce bilan sur le terrain n'est pas une simple compilation de chiffres, mais plut�
                             <div class="w-stat">Total des Stagiaires: <strong>${sData.total}</strong></div>
                             <div class="w-stat">${genderSummary}</div>
                         </div>
-                        <h4 class="spec-title">الولايات:</h4>
+                        <h4 class="spec-title">Wilayas:</h4>
                         <div class="spec-list">
                             ${wilayasHtml}
                         </div>
@@ -5886,7 +5886,7 @@ function renderCharts() {
         var count = item.data.total;
         var percentage = (count / maxSpecCount) * 100;
         var wilayasArr = Object.keys(item.data.wilayas);
-        var wilayasStr = wilayasArr.join("، ");
+        var wilayasStr = wilayasArr.join(", ");
         
         return `
             <div class="bar-item" style="margin-bottom: 5px; align-items: center;">
@@ -5904,7 +5904,7 @@ function renderCharts() {
     
     var specChartElem = document.getElementById('speciality-chart');
     if (specChartElem) {
-        specChartElem.innerHTML = specChartHtml || "<p>لا توجد بيانات</p>";
+        specChartElem.innerHTML = specChartHtml || "<p>Aucune donnée</p>";
     }
 
     var wilayaCounts = {};
@@ -5940,7 +5940,7 @@ function renderCharts() {
     }).join('');
 
     
-    document.getElementById('wilaya-chart').innerHTML = wilayaChartHtml || '<p style="color:var(--text-muted)">لا توجد بيانات</p>';
+    document.getElementById('wilaya-chart').innerHTML = wilayaChartHtml || '<p style="color:var(--text-muted)">Aucune donnée</p>';
 
     // Gender Chart (Using simple CSS mapping for representation)
     var males = filteredData.filter(function(d) { return d.gender === 'M'; }).length;
@@ -5989,7 +5989,7 @@ function renderTable() {
         tableBody.appendChild(tr);
     });
 
-    pageInfo.innerText = `Affichage de ${displayData.length} sur أصل ${filteredData.length} سجل`;
+    pageInfo.innerText = `Affichage de ${displayData.length} sur ${filteredData.length} au total`;
 }
 
 function applyFilters() {
