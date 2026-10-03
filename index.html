@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إحصائيات المتربصين الأجانب - النيجر</title>
+    <title>Statistiques des Stagiaires Étrangers - Niger</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- Icons -->
@@ -485,7 +485,7 @@ tbody tr:hover {
 </style>
 </head>
 <body>
-<noscript><div style="background: red; color: white; padding: 20px; text-align: center; font-size: 1.2rem;">يرجى تفعيل الجافاسكربت (JavaScript) أو فتح الملف في متصفح خارجي (مثل Google Chrome) لعرض البيانات.</div></noscript>
+<noscript><div style="background: red; color: white; padding: 20px; text-align: center; font-size: 1.2rem;">Veuillez activer JavaScript ou ouvrir le fichier dans un navigateur externe (ex. Google Chrome) pour afficher les données.</div></noscript>
 
     <div class="dashboard-container">
         <header class="glass-panel main-header">
@@ -509,12 +509,12 @@ tbody tr:hover {
 
         
         
-        <h2 style="margin-bottom: 1rem; color: var(--text-main); font-size: 1.5rem; border-bottom: 2px solid var(--primary-light); display: inline-block; padding-bottom: 0.5rem;">إحصائيات الولايات</h2>
+        <h2 style="margin-bottom: 1rem; color: var(--text-main); font-size: 1.5rem; border-bottom: 2px solid var(--primary-light); display: inline-block; padding-bottom: 0.5rem;">Statistiques par Wilayas</h2>
         <section class="detailed-stats-section" id="detailed-stats-container">
             <!-- Detailed Wilaya stats will go here -->
         </section>
 
-        <h2 style="margin-bottom: 1rem; color: var(--text-main); font-size: 1.5rem; border-bottom: 2px solid var(--primary-light); display: inline-block; padding-bottom: 0.5rem;">إحصائيات Spécialitéات</h2>
+        <h2 style="margin-bottom: 1rem; color: var(--text-main); font-size: 1.5rem; border-bottom: 2px solid var(--primary-light); display: inline-block; padding-bottom: 0.5rem;">Statistiques par Spécialités</h2>
         <section class="detailed-stats-section" id="specialities-stats-container">
             <!-- Detailed Specialities stats will go here -->
         </section>
@@ -522,7 +522,7 @@ tbody tr:hover {
 
         <section class="charts-section glass-panel">
             <div class="chart-container">
-                <h3>توزيع المتربصين حسب Wilaya</h3>
+                <h3>Répartition des Stagiaires par Wilaya</h3>
                 <div id="wilaya-chart" class="simple-bar-chart"></div>
             </div>
             <div class="chart-container">
@@ -534,7 +534,7 @@ tbody tr:hover {
         
         <section class="charts-section glass-panel" style="margin-top: 2rem;">
             <div class="chart-container" style="grid-column: 1 / -1;">
-                <h3>أهم Spécialitéات المطلوبة (Top Spécialités)</h3>
+                <h3>Spécialités les plus demandées (Top Spécialités)</h3>
                 <div id="speciality-chart" class="simple-bar-chart"></div>
             </div>
         </section>
@@ -543,23 +543,23 @@ tbody tr:hover {
             <div class="filters-container">
                 <div class="search-box">
                     <i class="fa-solid fa-search"></i>
-                    <input type="text" id="search-input" placeholder="ابحث عن اسم، لقب، أو رقم جواز سفر...">
+                    <input type="text" id="search-input" placeholder="Rechercher par nom, prénom ou numéro de passeport...">
                 </div>
                 
                 <div class="filter-group">
                     <select id="filter-wilaya" class="filter-select">
-                        <option value="">كل الولايات</option>
+                        <option value="">Toutes les Wilayas</option>
                     </select>
                     <select id="filter-speciality" class="filter-select">
-                        <option value="">كل Spécialitéات</option>
+                        <option value="">Toutes les Spécialités</option>
                     </select>
                     <select id="filter-gender" class="filter-select">
-                        <option value="">كل الأجناس</option>
+                        <option value="">Tous les Genres</option>
                         <option value="M">Homme (M)</option>
                         <option value="F">Femme (F)</option>
                     </select>
                     <select id="filter-file" class="filter-select">
-                        <option value="">كل الملفات المصدر</option>
+                        <option value="">Tous les fichiers sources</option>
                     </select>
                 </div>
             </div>
@@ -573,8 +573,8 @@ tbody tr:hover {
                             <th>Genre</th>
                             <th>Wilaya</th>
                             <th>Spécialité</th>
-                            <th>جواز السفر</th>
-                            <th>الملف المصدر</th>
+                            <th>Passeport</th>
+                            <th>Fichier Source</th>
                         </tr>
                     </thead>
                     <tbody id="table-body">
@@ -583,7 +583,7 @@ tbody tr:hover {
                 </table>
             </div>
             <div class="pagination">
-                <span id="page-info">يعرض 0 من 0</span>
+                <span id="page-info">Affiche 0 sur 0</span>
             </div>
         </section>
     </div>
