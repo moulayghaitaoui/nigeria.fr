@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statistiques des Stagiaires - Niger</title>
+    <title>إحصائيات المتربصين الأجانب - النيجر</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- Icons -->
@@ -485,7 +485,7 @@ tbody tr:hover {
 </style>
 </head>
 <body>
-<noscript><div style="background: red; color: white; padding: 20px; text-align: center; font-size: 1.2rem;">Veuillez activer JavaScript ou ouvrir le fichier dans un navigateur externe (comme Google Chrome) pour afficher les données.</div></noscript>
+<noscript><div style="background: red; color: white; padding: 20px; text-align: center; font-size: 1.2rem;">يرجى تفعيل الجافاسكربت (JavaScript) أو فتح الملف في متصفح خارجي (مثل Google Chrome) لعرض البيانات.</div></noscript>
 
     <div class="dashboard-container">
         <header class="glass-panel main-header">
@@ -509,12 +509,12 @@ tbody tr:hover {
 
         
         
-        <h2 style="margin-bottom: 1rem; color: var(--text-main); font-size: 1.5rem; border-bottom: 2px solid var(--primary-light); display: inline-block; padding-bottom: 0.5rem;">Statistiques par Wilaya</h2>
+        <h2 style="margin-bottom: 1rem; color: var(--text-main); font-size: 1.5rem; border-bottom: 2px solid var(--primary-light); display: inline-block; padding-bottom: 0.5rem;">إحصائيات الولايات</h2>
         <section class="detailed-stats-section" id="detailed-stats-container">
             <!-- Detailed Wilaya stats will go here -->
         </section>
 
-        <h2 style="margin-bottom: 1rem; color: var(--text-main); font-size: 1.5rem; border-bottom: 2px solid var(--primary-light); display: inline-block; padding-bottom: 0.5rem;">Statistiques par Spécialité</h2>
+        <h2 style="margin-bottom: 1rem; color: var(--text-main); font-size: 1.5rem; border-bottom: 2px solid var(--primary-light); display: inline-block; padding-bottom: 0.5rem;">إحصائيات Spécialitéات</h2>
         <section class="detailed-stats-section" id="specialities-stats-container">
             <!-- Detailed Specialities stats will go here -->
         </section>
@@ -522,7 +522,7 @@ tbody tr:hover {
 
         <section class="charts-section glass-panel">
             <div class="chart-container">
-                <h3>Répartition des Stagiaires par Wilaya</h3>
+                <h3>توزيع المتربصين حسب Wilaya</h3>
                 <div id="wilaya-chart" class="simple-bar-chart"></div>
             </div>
             <div class="chart-container">
@@ -534,7 +534,7 @@ tbody tr:hover {
         
         <section class="charts-section glass-panel" style="margin-top: 2rem;">
             <div class="chart-container" style="grid-column: 1 / -1;">
-                <h3>Top Spécialités Demandées</h3>
+                <h3>أهم Spécialitéات المطلوبة (Top Spécialités)</h3>
                 <div id="speciality-chart" class="simple-bar-chart"></div>
             </div>
         </section>
@@ -543,23 +543,23 @@ tbody tr:hover {
             <div class="filters-container">
                 <div class="search-box">
                     <i class="fa-solid fa-search"></i>
-                    <input type="text" id="search-input" placeholder="Rechercher par nom, prénom ou passeport...">
+                    <input type="text" id="search-input" placeholder="ابحث عن اسم، لقب، أو رقم جواز سفر...">
                 </div>
                 
                 <div class="filter-group">
                     <select id="filter-wilaya" class="filter-select">
-                        <option value="">Toutes les Wilayas</option>
+                        <option value="">كل الولايات</option>
                     </select>
                     <select id="filter-speciality" class="filter-select">
-                        <option value="">Toutes les Spécialités</option>
+                        <option value="">كل Spécialitéات</option>
                     </select>
                     <select id="filter-gender" class="filter-select">
-                        <option value="">Tous les Genres</option>
+                        <option value="">كل الأجناس</option>
                         <option value="M">Homme (M)</option>
                         <option value="F">Femme (F)</option>
                     </select>
                     <select id="filter-file" class="filter-select">
-                        <option value="">Tous les Fichiers</option>
+                        <option value="">كل الملفات المصدر</option>
                     </select>
                 </div>
             </div>
@@ -573,8 +573,8 @@ tbody tr:hover {
                             <th>Genre</th>
                             <th>Wilaya</th>
                             <th>Spécialité</th>
-                            <th>N° Passeport</th>
-                            <th>Fichier Source</th>
+                            <th>جواز السفر</th>
+                            <th>الملف المصدر</th>
                         </tr>
                     </thead>
                     <tbody id="table-body">
@@ -583,7 +583,7 @@ tbody tr:hover {
                 </table>
             </div>
             <div class="pagination">
-                <span id="page-info">Affichage de 0 sur 0</span>
+                <span id="page-info">يعرض 0 من 0</span>
             </div>
         </section>
     </div>
@@ -597,9 +597,11 @@ tbody tr:hover {
         "N°": "1",
         "Nom": "Ayouba Abdoulaye M. Almoustapha",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -608,9 +610,11 @@ tbody tr:hover {
         "N°": "2",
         "Nom": "Souley Ali Mahamadou",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -619,9 +623,11 @@ tbody tr:hover {
         "N°": "3",
         "Nom": "Mamane Sani Issa",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -630,9 +636,11 @@ tbody tr:hover {
         "N°": "4",
         "Nom": "Mohamed Yahaya Yacouba",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -641,9 +649,11 @@ tbody tr:hover {
         "N°": "5",
         "Nom": "Moussa Hamane Abderrahmane",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -652,9 +662,11 @@ tbody tr:hover {
         "N°": "6",
         "Nom": "Maï Moussa Zakari Zakari",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -663,9 +675,11 @@ tbody tr:hover {
         "N°": "7",
         "Nom": "Doulla Arbonkano Abdouramane",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -674,9 +688,11 @@ tbody tr:hover {
         "N°": "8",
         "Nom": "Chekaraou Abdoul Nasser",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -685,9 +701,11 @@ tbody tr:hover {
         "N°": "9",
         "Nom": "Ibrahim Beto Akilou",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -696,9 +714,11 @@ tbody tr:hover {
         "N°": "10",
         "Nom": "Mamadou Mounikaila Mohamed",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -707,9 +727,11 @@ tbody tr:hover {
         "N°": "11",
         "Nom": "Salifou Hassane Ismaël",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -718,9 +740,11 @@ tbody tr:hover {
         "N°": "12",
         "Nom": "Issaka Djibo Abdoulaye",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -729,9 +753,11 @@ tbody tr:hover {
         "N°": "13",
         "Nom": "Moussa Sory Safwane",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -740,9 +766,11 @@ tbody tr:hover {
         "N°": "14",
         "Nom": "Sabo Abdou Ayouba",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -751,9 +779,11 @@ tbody tr:hover {
         "N°": "15",
         "Nom": "Garba Dan Ango Mahrazou",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -762,9 +792,11 @@ tbody tr:hover {
         "N°": "16",
         "Nom": "Bouéïma Tickoura Ismaël",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -773,9 +805,11 @@ tbody tr:hover {
         "N°": "17",
         "Nom": "Mati Salissou Samaïla",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -784,9 +818,11 @@ tbody tr:hover {
         "N°": "18",
         "Nom": "Ibrahim Idi Hamissou",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -795,9 +831,11 @@ tbody tr:hover {
         "N°": "19",
         "Nom": "Issakou Alassane Abdoul Salam",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -806,9 +844,11 @@ tbody tr:hover {
         "N°": "20",
         "Nom": "Adamou Alassane yasser",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -817,9 +857,11 @@ tbody tr:hover {
         "N°": "21",
         "Nom": "Elhadji Chamba Ali Ahamet",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -828,9 +870,11 @@ tbody tr:hover {
         "N°": "22",
         "Nom": "Moussa Aboubacar Idrissa",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -839,9 +883,11 @@ tbody tr:hover {
         "N°": "23",
         "Nom": "Ayouba Beidari Ibrahim",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -850,9 +896,11 @@ tbody tr:hover {
         "N°": "24",
         "Nom": "Idi Amadou Abdoul Majid",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -861,9 +909,11 @@ tbody tr:hover {
         "N°": "25",
         "Nom": "Mahaman Nafiou S Farouk",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -872,9 +922,11 @@ tbody tr:hover {
         "N°": "26",
         "Nom": "Haboubacar Abba Yahaya",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -883,9 +935,11 @@ tbody tr:hover {
         "N°": "27",
         "Nom": "Seydou Ali Alhassane",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -894,9 +948,11 @@ tbody tr:hover {
         "N°": "28",
         "Nom": "Maman Bachir Mohamed",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -905,9 +961,11 @@ tbody tr:hover {
         "N°": "29",
         "Nom": "Abdoul Salam Magagi Moussa",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -916,9 +974,11 @@ tbody tr:hover {
         "N°": "30",
         "Nom": "Mahaman Dogo Tassiou",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -927,9 +987,11 @@ tbody tr:hover {
         "N°": "31",
         "Nom": "Abdou Tsahe Labirou",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -938,9 +1000,11 @@ tbody tr:hover {
         "N°": "32",
         "Nom": "Moussa Moumoumi Moumoumi",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -949,9 +1013,11 @@ tbody tr:hover {
         "N°": "33",
         "Nom": "Garba Harouna Yacouba",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -960,9 +1026,11 @@ tbody tr:hover {
         "N°": "34",
         "Nom": "Sani Maman Maman Fahad",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -971,9 +1039,11 @@ tbody tr:hover {
         "N°": "35",
         "Nom": "Amadou Abdou S Abdoulwahid",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -982,9 +1052,11 @@ tbody tr:hover {
         "N°": "36",
         "Nom": "Ousmane Yaye Mamane",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -993,9 +1065,11 @@ tbody tr:hover {
         "N°": "37",
         "Nom": "Boubacar Amadou Sidikou",
         "sex": "M",
-        "Spécialité / التخصص": "Froid et Climatisation - تبريد وتكييف",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -1004,9 +1078,11 @@ tbody tr:hover {
         "N°": "38",
         "Nom": "Issaka soucké Amina",
         "sex": "F",
-        "Spécialité / التخصص": "transformation agroalimentaire",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -1015,9 +1091,11 @@ tbody tr:hover {
         "N°": "39",
         "Nom": "Madi Ibrahim safia",
         "sex": "F",
-        "Spécialité / التخصص": "transformation agroalimentaire",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "القائمة الحقيقية.xlsx",
@@ -1026,9 +1104,11 @@ tbody tr:hover {
         "N°": "40",
         "Nom": "Yeya younoussou charifatou",
         "sex": "F",
-        "Spécialité / التخصص": "transformation agroalimentaire",
+        "Spécialité / التخصص": "Installateur de panneaux solaires - مركب ألواح الطاقة الشمسية",
         "Wilaya / الولاية": "أدرار",
-        "Remarque /ملاحظة": ""
+        "Remarque /ملاحظة": "",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1043,7 +1123,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "91524741"
+        "Téléphone / الهاتف": "91524741",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1058,7 +1140,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "97223505"
+        "Téléphone / الهاتف": "97223505",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1073,7 +1157,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "88010482"
+        "Téléphone / الهاتف": "88010482",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1088,7 +1174,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "76852924"
+        "Téléphone / الهاتف": "76852924",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1103,7 +1191,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "96480309"
+        "Téléphone / الهاتف": "96480309",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1118,7 +1208,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "88352646"
+        "Téléphone / الهاتف": "88352646",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1133,7 +1225,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "93358812"
+        "Téléphone / الهاتف": "93358812",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1148,7 +1242,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "97476770"
+        "Téléphone / الهاتف": "97476770",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1163,7 +1259,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "99076369"
+        "Téléphone / الهاتف": "99076369",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1178,7 +1276,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "86382426"
+        "Téléphone / الهاتف": "86382426",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1193,7 +1293,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "84320709"
+        "Téléphone / الهاتف": "84320709",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1208,7 +1310,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "96345090"
+        "Téléphone / الهاتف": "96345090",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1223,7 +1327,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "74090650"
+        "Téléphone / الهاتف": "74090650",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1238,7 +1344,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "99188133"
+        "Téléphone / الهاتف": "99188133",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1253,7 +1361,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "92324494"
+        "Téléphone / الهاتف": "92324494",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1268,7 +1378,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "89065273"
+        "Téléphone / الهاتف": "89065273",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1283,7 +1395,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "96786386"
+        "Téléphone / الهاتف": "96786386",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1298,7 +1412,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "88860400"
+        "Téléphone / الهاتف": "88860400",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996 (1).xlsx",
@@ -1313,7 +1429,9 @@ tbody tr:hover {
         "Pointure / مقاس الحذاء": "",
         "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
         "Code / الكود": "CIP08Q",
-        "Téléphone / الهاتف": "90482970"
+        "Téléphone / الهاتف": "90482970",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996.xlsx",
@@ -1323,7 +1441,10 @@ tbody tr:hover {
         "Nom": "Edmond Grégoire",
         "Prénom": "Philippe",
         "sex": "M",
-        "SPECIALETER": "Agent Foreur  minier"
+        "SPECIALETER": "Agent Foreur  minier",
+        "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996.xlsx",
@@ -1333,7 +1454,10 @@ tbody tr:hover {
         "Nom": "Rabé Mahamane",
         "Prénom": "Mahaman Kabir",
         "sex": "M",
-        "SPECIALETER": "Agent Foreur  minier"
+        "SPECIALETER": "Agent Foreur  minier",
+        "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996.xlsx",
@@ -1343,7 +1467,10 @@ tbody tr:hover {
         "Nom": "Arzika Magagi",
         "Prénom": "Aboubacar",
         "sex": "M",
-        "SPECIALETER": "Agent Foreur  minier"
+        "SPECIALETER": "Agent Foreur  minier",
+        "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996.xlsx",
@@ -1353,7 +1480,10 @@ tbody tr:hover {
         "Nom": "Abdoulaye Oumarou",
         "Prénom": "Amadou",
         "sex": "M",
-        "SPECIALETER": "Agent Foreur  minier"
+        "SPECIALETER": "Agent Foreur  minier",
+        "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996.xlsx",
@@ -1363,7 +1493,10 @@ tbody tr:hover {
         "Nom": "Issoufou ADAMOU",
         "Prénom": "Maman Lawaly",
         "sex": "M",
-        "SPECIALETER": "Agent Foreur  minier"
+        "SPECIALETER": "Agent Foreur  minier",
+        "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996.xlsx",
@@ -1373,7 +1506,10 @@ tbody tr:hover {
         "Nom": "Bachir Mamam",
         "Prénom": "Abdoul Nasser",
         "sex": "M",
-        "SPECIALETER": "Agent Foreur  minier"
+        "SPECIALETER": "Agent Foreur  minier",
+        "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996.xlsx",
@@ -1383,7 +1519,10 @@ tbody tr:hover {
         "Nom": "Abdou Seydou Ismaël",
         "Prénom": "Ismaël",
         "sex": "M",
-        "SPECIALETER": "Agent Foreur  minier"
+        "SPECIALETER": "Agent Foreur  minier",
+        "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996.xlsx",
@@ -1393,7 +1532,10 @@ tbody tr:hover {
         "Nom": "Himadou Hamadou",
         "Prénom": "Hamadou",
         "sex": "M",
-        "SPECIALETER": "Agent Foreur  minier"
+        "SPECIALETER": "Agent Foreur  minier",
+        "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "4_5906544612935213996.xlsx",
@@ -1403,989 +1545,897 @@ tbody tr:hover {
         "Nom": "Abdou Salifou Maman Sani",
         "Prénom": "Maman Sani",
         "sex": "M",
-        "SPECIALETER": "Agent Foreur  minier"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "LAOUALI  SAHIROU ABOU ISSIHAKA",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "1"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "MOUSSA ADAMOU MAHAMADOU BACHIROU",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "2"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "SANI  OUSMANE  HASSANE",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "3"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "MOUSSA ALI AMADOU",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "4"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "MOUSSA MOROU ABDOUL MADJID",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "5"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "LAOUALI  MAMANE  ABDOUL MALIK",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "6"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "BELLO GARA  RILWANOU",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "7"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "KANTA  OUSSEINI  MOUSSA",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "8"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "LAWALI  MANI  OUMAROU",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "9"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "SANI  JARI  IBRAHIM",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "10"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "ADAMOU NIANDOU ABDOURAHMANE",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "11"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "GALISSOU SOULEYMANE",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "12"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "MAAROU ILLIASSOU  RABILOU",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "13"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "MOUSSA TAHIROU ZIRKIFIL",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "14"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "HASSANE GADO  ABDOURAHMANE",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "15"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "SANI  OUSMANE  OUSSEYNI",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "16"
-    },
-    {
-        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
-        "Sheet_Name": "Feuil1",
-        "الملاحظة": "",
-        "التخصص": "Construction Métallique",
-        "Column_3": "",
-        "Column_4": "",
-        "الجنس": "ذكر",
-        "الإسم واللقب": "HALADOU  MOUSSA  DLAMILOU",
-        "Column_7": "",
-        "Column_8": "",
-        "Column_9": "",
-        "الولايـة": "الجزائر",
-        "الرقم": "17"
+        "SPECIALETER": "Agent Foreur  minier",
+        "Spécialité / التخصص": "Cosmétique - صناعة مواد التجميل الطبيعية",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "1",
         "Nom et Prénom / الاسم واللقب": "ABDOU DAN BABA ABDOUL RACHID",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "1313PC516"
+        "N° Passeport / جواز السفر": "1313PC516",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "2",
         "Nom et Prénom / الاسم واللقب": "ABDOU HABOU AL SAAD",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "12PC88642"
+        "N° Passeport / جواز السفر": "12PC88642",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "3",
         "Nom et Prénom / الاسم واللقب": "ABDOUL AZIZ BOUBACAR ALHASSANE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00357"
+        "N° Passeport / جواز السفر": "01PP00357",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "5",
         "Nom et Prénom / الاسم واللقب": "ABDOUL MOUMOUNI BONDJERE IBRAHIM",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00389"
+        "N° Passeport / جواز السفر": "01PP00389",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "6",
         "Nom et Prénom / الاسم واللقب": "ABOUBACAR SAHIROU ABDOUL WAHAB",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00451"
+        "N° Passeport / جواز السفر": "01PP00451",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "7",
         "Nom et Prénom / الاسم واللقب": "ADAMOU DAMBADJI ABDOURAHAMANE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "12PC16991"
+        "N° Passeport / جواز السفر": "12PC16991",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
+        "التخصص": "Tourisme - سياحة وأسفار"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "8",
         "Nom et Prénom / الاسم واللقب": "ADAMOU OUMAROU MANSOUR",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "14PC11755"
+        "N° Passeport / جواز السفر": "14PC11755",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "9",
         "Nom et Prénom / الاسم واللقب": "ADO KAOURA MAMAN MIDANSIROU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "12PC60233"
+        "N° Passeport / جواز السفر": "12PC60233",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "10",
         "Nom et Prénom / الاسم واللقب": "ALI MOUSSA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00431"
+        "N° Passeport / جواز السفر": "01PP00431",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "11",
         "Nom et Prénom / الاسم واللقب": "AMADA DJIBRILLA ALI",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "12PC51580"
+        "N° Passeport / جواز السفر": "12PC51580",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "12",
         "Nom et Prénom / الاسم واللقب": "AMADOU ABDOULAYI FIRDAOUSSI",
         "Genre / الجنس": "F",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00275"
+        "N° Passeport / جواز السفر": "01PP00275",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "13",
         "Nom et Prénom / الاسم واللقب": "ASSAMAOU ADA ANGO",
         "Genre / الجنس": "F",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00054"
+        "N° Passeport / جواز السفر": "01PP00054",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "14",
         "Nom et Prénom / الاسم واللقب": "BINTOU ADJI TCHOULOUM",
         "Genre / الجنس": "F",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00217"
+        "N° Passeport / جواز السفر": "01PP00217",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "15",
         "Nom et Prénom / الاسم واللقب": "BOUBACAR TCHINDO DOUDOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00437"
+        "N° Passeport / جواز السفر": "01PP00437",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "16",
         "Nom et Prénom / الاسم واللقب": "CHERIF MAHAMADOU KANNY",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00268"
+        "N° Passeport / جواز السفر": "01PP00268",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "17",
         "Nom et Prénom / الاسم واللقب": "FADILATOU YACOUBA ABACHE",
         "Genre / الجنس": "F",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00410"
+        "N° Passeport / جواز السفر": "01PP00410",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "18",
         "Nom et Prénom / الاسم واللقب": "FADJI MADOU KOURA ISSOUFA",
         "Genre / الجنس": "F",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00309"
+        "N° Passeport / جواز السفر": "01PP00309",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "19",
         "Nom et Prénom / الاسم واللقب": "HALIMATOU ABDOU KIMBA",
         "Genre / الجنس": "F",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00172"
+        "N° Passeport / جواز السفر": "01PP00172",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "20",
         "Nom et Prénom / الاسم واللقب": "HASSAN ELHADJI MOUSTAPHA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00382"
+        "N° Passeport / جواز السفر": "01PP00382",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "21",
         "Nom et Prénom / الاسم واللقب": "HASSOUMOU DOUMOUTCHE BANOUA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP01191"
+        "N° Passeport / جواز السفر": "01PP01191",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
+        "التخصص": "Tourisme - سياحة وأسفار"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "22",
         "Nom et Prénom / الاسم واللقب": "IBRAHIM DJIADO NOUFOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00397"
+        "N° Passeport / جواز السفر": "01PP00397",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "23",
         "Nom et Prénom / الاسم واللقب": "IBRAHIM KALLAMOU OUMAROU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00377"
+        "N° Passeport / جواز السفر": "01PP00377",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
+        "التخصص": "Tourisme - سياحة وأسفار"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "24",
         "Nom et Prénom / الاسم واللقب": "IBRAHIM MAHAMADOU ISSA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00108"
+        "N° Passeport / جواز السفر": "01PP00108",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "25",
         "Nom et Prénom / الاسم واللقب": "IDRISSA HAMIDOU MOUDJARAF",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00239"
+        "N° Passeport / جواز السفر": "01PP00239",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "27",
         "Nom et Prénom / الاسم واللقب": "IMRANA ZAKARI OUSMANE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00434"
+        "N° Passeport / جواز السفر": "01PP00434",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
+        "التخصص": "Tourisme - سياحة وأسفار"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "28",
         "Nom et Prénom / الاسم واللقب": "LATIFA SEYDOU SALIFOU",
         "Genre / الجنس": "F",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00083"
+        "N° Passeport / جواز السفر": "01PP00083",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "29",
         "Nom et Prénom / الاسم واللقب": "MAHAMADOU MOUTARI HAMISSOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00418"
+        "N° Passeport / جواز السفر": "01PP00418",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "30",
         "Nom et Prénom / الاسم واللقب": "MAHAMAN MOUTARI YAKOUBOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00536"
+        "N° Passeport / جواز السفر": "01PP00536",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "31",
         "Nom et Prénom / الاسم واللقب": "MAHAMAN SIRADJI  ABDOURAHAMANE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00098"
+        "N° Passeport / جواز السفر": "01PP00098",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
+        "التخصص": "Tourisme - سياحة وأسفار"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "32",
         "Nom et Prénom / الاسم واللقب": "MAMIDOU ABOUBACAR CHAMSDINE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00250"
+        "N° Passeport / جواز السفر": "01PP00250",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "33",
         "Nom et Prénom / الاسم واللقب": "MAMOUDOU ABDOU SOULEYMANE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00142"
+        "N° Passeport / جواز السفر": "01PP00142",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "34",
         "Nom et Prénom / الاسم واللقب": "MAMOUDOU SEKOU ZAKARI YAOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "12PC58169"
+        "N° Passeport / جواز السفر": "12PC58169",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "35",
         "Nom et Prénom / الاسم واللقب": "MOHAMED ABDOURAHAMANE DJALOUD",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "12PC07876"
+        "N° Passeport / جواز السفر": "12PC07876",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
+        "التخصص": "Tourisme - سياحة وأسفار"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "36",
         "Nom et Prénom / الاسم واللقب": "NASSIROU BAKAYA JIMRAOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00117"
+        "N° Passeport / جواز السفر": "01PP00117",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
+        "التخصص": "Tourisme - سياحة وأسفار"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "37",
         "Nom et Prénom / الاسم واللقب": "OUMAROU HASSAN HARIROU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00257"
+        "N° Passeport / جواز السفر": "01PP00257",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
+        "التخصص": "Tourisme - سياحة وأسفار"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "38",
         "Nom et Prénom / الاسم واللقب": "OUMAROU IBRO NASSIROU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00427"
+        "N° Passeport / جواز السفر": "01PP00427",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "40",
         "Nom et Prénom / الاسم واللقب": "RACHIDA SAIDOU GAGARA",
         "Genre / الجنس": "F",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00259"
+        "N° Passeport / جواز السفر": "01PP00259",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "41",
         "Nom et Prénom / الاسم واللقب": "ROUMANATOU OUMAROU BOUBACAR",
         "Genre / الجنس": "F",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00327"
+        "N° Passeport / جواز السفر": "01PP00327",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "42",
         "Nom et Prénom / الاسم واللقب": "SANI SOULEY MAHAMAN BACHIR",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00340"
+        "N° Passeport / جواز السفر": "01PP00340",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "43",
         "Nom et Prénom / الاسم واللقب": "SEYDOU MOUSSA MAHAMADOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "14PC19601"
+        "N° Passeport / جواز السفر": "14PC19601",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "47",
         "Nom et Prénom / الاسم واللقب": "SOULEYMANE DJIBO HABOUBACAR",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00359"
+        "N° Passeport / جواز السفر": "01PP00359",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "48",
         "Nom et Prénom / الاسم واللقب": "SOULEYMANE GADO MOUDACIR",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00466"
+        "N° Passeport / جواز السفر": "01PP00466",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "49",
         "Nom et Prénom / الاسم واللقب": "YOUSSOUFA MAHAMAN SANI ALI",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00295"
+        "N° Passeport / جواز السفر": "01PP00295",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "50",
         "Nom et Prénom / الاسم واللقب": "ZAKARI MAHAMANE HABIBOULAYE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00348"
+        "N° Passeport / جواز السفر": "01PP00348",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "51",
         "Nom et Prénom / الاسم واللقب": "ADAM MAHAMADOU MAMANE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00463"
+        "N° Passeport / جواز السفر": "01PP00463",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "52",
         "Nom et Prénom / الاسم واللقب": "ABDOUL RAHIM BOUBACAR KANDI OROU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00234"
+        "N° Passeport / جواز السفر": "01PP00234",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "53",
         "Nom et Prénom / الاسم واللقب": "MOCTAR AYOUBA NASSIROU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00470"
+        "N° Passeport / جواز السفر": "01PP00470",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "54",
         "Nom et Prénom / الاسم واللقب": "SALISSOU DAHIROU ABDOU SALAMOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00484"
+        "N° Passeport / جواز السفر": "01PP00484",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "55",
         "Nom et Prénom / الاسم واللقب": "ABBA ABOUBACAR ALI",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00160"
+        "N° Passeport / جواز السفر": "01PP00160",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "56",
         "Nom et Prénom / الاسم واللقب": "MASSAOUDOU HAMIDOU WONKOYE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00364"
+        "N° Passeport / جواز السفر": "01PP00364",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "57",
         "Nom et Prénom / الاسم واللقب": "BILYAMINOU ABDOU BISSALA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00055"
+        "N° Passeport / جواز السفر": "01PP00055",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "58",
         "Nom et Prénom / الاسم واللقب": "AHMED ABDOU OUSSEINI",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00133"
+        "N° Passeport / جواز السفر": "01PP00133",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "59",
         "Nom et Prénom / الاسم واللقب": "RIDWANOU BOUKARI BARMO",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00469"
+        "N° Passeport / جواز السفر": "01PP00469",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "60",
         "Nom et Prénom / الاسم واللقب": "ABOUBACAR IBRAHIM YAHAYA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00360"
+        "N° Passeport / جواز السفر": "01PP00360",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "61",
         "Nom et Prénom / الاسم واللقب": "RAKIBOU ABDOURAHAMANE ABDOULAYE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00479"
+        "N° Passeport / جواز السفر": "01PP00479",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "62",
         "Nom et Prénom / الاسم واللقب": "ADAMOU HAROUNA ADO",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00355"
+        "N° Passeport / جواز السفر": "01PP00355",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "63",
         "Nom et Prénom / الاسم واللقب": "BACHIR ABDOURAHAMAN NA INNA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00353"
+        "N° Passeport / جواز السفر": "01PP00353",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "64",
         "Nom et Prénom / الاسم واللقب": "ABOU SOULEY DARI",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00060"
+        "N° Passeport / جواز السفر": "01PP00060",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "65",
         "Nom et Prénom / الاسم واللقب": "ABDOUL KARIMOUNE ALIO",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00456"
+        "N° Passeport / جواز السفر": "01PP00456",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "66",
         "Nom et Prénom / الاسم واللقب": "SOULEYMANE ABOUBACAR SAMAILA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00245"
+        "N° Passeport / جواز السفر": "01PP00245",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "67",
         "Nom et Prénom / الاسم واللقب": "OUSMANE MAMAN MALANTA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00264"
+        "N° Passeport / جواز السفر": "01PP00264",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "68",
         "Nom et Prénom / الاسم واللقب": "ABDOUL MALIKI OUMAROU ABDOURAHAME",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00248"
+        "N° Passeport / جواز السفر": "01PP00248",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "69",
         "Nom et Prénom / الاسم واللقب": "IBRAHIM ADAMOU MANI",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00106"
+        "N° Passeport / جواز السفر": "01PP00106",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "70",
         "Nom et Prénom / الاسم واللقب": "ALI HASSOUMI RIDOUANE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00320"
+        "N° Passeport / جواز السفر": "01PP00320",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "71",
         "Nom et Prénom / الاسم واللقب": "ELHADJI MOUSSA ABDOUL RAZAK",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00352"
+        "N° Passeport / جواز السفر": "01PP00352",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "72",
         "Nom et Prénom / الاسم واللقب": "MOUSSA CLOUSSOU BACHIROU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00147"
+        "N° Passeport / جواز السفر": "01PP00147",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "73",
         "Nom et Prénom / الاسم واللقب": "MOUMOUNI YAYE IBRAHIM",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00335"
+        "N° Passeport / جواز السفر": "01PP00335",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "74",
         "Nom et Prénom / الاسم واللقب": "YOUSSOUFA ABDOULAYE SALIFOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00381"
+        "N° Passeport / جواز السفر": "01PP00381",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "75",
         "Nom et Prénom / الاسم واللقب": "MOUSSA IDI HAROUNA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00221"
+        "N° Passeport / جواز السفر": "01PP00221",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "76",
         "Nom et Prénom / الاسم واللقب": "OUSSEINI MALAM MOUSSA ISSOUFOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00083"
+        "N° Passeport / جواز السفر": "01PP00083",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "77",
         "Nom et Prénom / الاسم واللقب": "IBRAHIM HASSANE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00274"
+        "N° Passeport / جواز السفر": "01PP00274",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "78",
         "Nom et Prénom / الاسم واللقب": "ADAMOU HAMZA ABARCHI",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00177"
+        "N° Passeport / جواز السفر": "01PP00177",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "79",
         "Nom et Prénom / الاسم واللقب": "ABOUCAR MAHAMADOU ABDOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00078"
+        "N° Passeport / جواز السفر": "01PP00078",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "80",
         "Nom et Prénom / الاسم واللقب": "ALIO SADAOU MOUSTAPHA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00082"
+        "N° Passeport / جواز السفر": "01PP00082",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "81",
         "Nom et Prénom / الاسم واللقب": "ABDOUL AZIZ GARAMA SALISSOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00210"
+        "N° Passeport / جواز السفر": "01PP00210",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "82",
         "Nom et Prénom / الاسم واللقب": "ABDOULAYE NASSER ABDOULAYE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00098"
+        "N° Passeport / جواز السفر": "01PP00098",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "83",
         "Nom et Prénom / الاسم واللقب": "LAOUALY BOUNIA HAROU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00384"
+        "N° Passeport / جواز السفر": "01PP00384",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "84",
         "Nom et Prénom / الاسم واللقب": "AMADOU ZACKI ABDOU SALAM",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "13PC80721"
+        "N° Passeport / جواز السفر": "13PC80721",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "85",
         "Nom et Prénom / الاسم واللقب": "SADIKOU HAMA ISSOUFA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "12PC82484"
+        "N° Passeport / جواز السفر": "12PC82484",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "86",
         "Nom et Prénom / الاسم واللقب": "AFIZOU OUMAROU ABDOULAHI",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00711"
+        "N° Passeport / جواز السفر": "01PP00711",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "87",
         "Nom et Prénom / الاسم واللقب": "ABDOUL KADER DAN BOUZOU  ABDOUL RACHID",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
         "N° Passeport / جواز السفر": "01PP00075"
     },
@@ -2394,63 +2444,77 @@ tbody tr:hover {
         "N°": "88",
         "Nom et Prénom / الاسم واللقب": "OMAR GAYADOU OUNTENI",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00419"
+        "N° Passeport / جواز السفر": "01PP00419",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "89",
         "Nom et Prénom / الاسم واللقب": "NASSIROU ABAKASSOUM AMADOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00412"
+        "N° Passeport / جواز السفر": "01PP00412",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "90",
         "Nom et Prénom / الاسم واللقب": "OUMAROU MOUNKAILA MOUNKAILA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "13PC8321"
+        "N° Passeport / جواز السفر": "13PC8321",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "91",
         "Nom et Prénom / الاسم واللقب": "ADAMOU HAOUKOYA ABDOUL MALIKI",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "13PC71280"
+        "N° Passeport / جواز السفر": "13PC71280",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "92",
         "Nom et Prénom / الاسم واللقب": "BOUBACAR BISSALA MAGAWATA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00446"
+        "N° Passeport / جواز السفر": "01PP00446",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "93",
         "Nom et Prénom / الاسم واللقب": "NADJIBOU SEYNI KALILOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "14PC09230"
+        "N° Passeport / جواز السفر": "14PC09230",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "94",
         "Nom et Prénom / الاسم واللقب": "MAOHAMADOU LAMINE ALI MOUNDIO",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "13PC66485"
+        "N° Passeport / جواز السفر": "13PC66485",
+        "Spécialité / Spécialité": "Maintenance Informatique - صيانة عتاد الإعلام الآلي",
+        "التخصص": "Maintenance Informatique - صيانة عتاد الإعلام الآلي"
     },
     {
         "Source_File": "ملف المتربصين الاجانب لدولة النيجر المصحح (1).docx",
@@ -2970,7 +3034,7 @@ tbody tr:hover {
         "N°": "03",
         "Nom et Prénom / الاسم واللقب": "MOUSSA HASSANE MAHAMADOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Plomberieه- ترصيص الصحي",
+        "Spécialité / التخصص": "Soudure pipeline - تلحيم أنابيب البترول والغاز",
         "Wilaya / الولاية": "Ouargla (ورقلة)",
         "N° Passeport / جواز السفر": "01PP00228"
     },
@@ -2979,7 +3043,7 @@ tbody tr:hover {
         "N°": "04",
         "Nom et Prénom / الاسم واللقب": "HABIBOU MAHAMED SALISSOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Plomberieه- ترصيص الصحي",
+        "Spécialité / التخصص": "Soudure pipeline - تلحيم أنابيب البترول والغاز",
         "Wilaya / الولاية": "Ouargla (ورقلة)",
         "N° Passeport / جواز السفر": "01PP00193"
     },
@@ -3321,54 +3385,66 @@ tbody tr:hover {
         "N°": "4",
         "Nom et Prénom / الاسم واللقب": "ABDOUL AZIZ KANTA MATO ALASSANE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00139"
+        "N° Passeport / جواز السفر": "01PP00139",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
+        "التخصص": "Tourisme - سياحة وأسفار"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "26",
         "Nom et Prénom / الاسم واللقب": "IDRISSA MAGUIS ALHASSANE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00406"
+        "N° Passeport / جواز السفر": "01PP00406",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "39",
         "Nom et Prénom / الاسم واللقب": "OUMAROU OUSMANE ABDOUL MADJID",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00403"
+        "N° Passeport / جواز السفر": "01PP00403",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "44",
         "Nom et Prénom / الاسم واللقب": "SIDIKOU AMADOU DJIBRILLA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "14PC06628"
+        "N° Passeport / جواز السفر": "14PC06628",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
+        "التخصص": "Tourisme - سياحة وأسفار"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "45",
         "Nom et Prénom / الاسم واللقب": "SOULEY ALI DJIBRIL",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "01PP00468"
+        "N° Passeport / جواز السفر": "01PP00468",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "46",
         "Nom et Prénom / الاسم واللقب": "SOULEYMANE AMINOU HABOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "13PC19492"
+        "N° Passeport / جواز السفر": "13PC19492",
+        "Spécialité / Spécialité": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية"
     },
     {
         "Source_File": "ملف المتربصين الاجانب لدولة النيجر المصحح (1).docx",
@@ -3402,7 +3478,7 @@ tbody tr:hover {
         "N°": "01",
         "Nom et Prénom / الاسم واللقب": "SIDIKOU ADAMOU ISSA",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Plomberieه- ترصيص الصحي",
+        "Spécialité / التخصص": "Soudure pipeline - تلحيم أنابيب البترول والغاز",
         "Wilaya / الولاية": "Ouargla (ورقلة)",
         "N° Passeport / جواز السفر": "12PC19177"
     },
@@ -3411,423 +3487,18 @@ tbody tr:hover {
         "N°": "02",
         "Nom et Prénom / الاسم واللقب": "MOUSSA HALIDOU ILLIASSOU",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Plomberieه- ترصيص الصحي",
+        "Spécialité / التخصص": "Soudure pipeline - تلحيم أنابيب البترول والغاز",
         "Wilaya / الولاية": "Ouargla (ورقلة)",
         "N° Passeport / جواز السفر": "13PC16921"
     },
     {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "1",
-        "Nom et Prénom / الاسم واللقب": "BOUBOUCAR BABA SOUNNA ABDOUL MADJID",
+        "Source_File": "Etrangers_ TAM.xlsx",
+        "N°": "95",
+        "Nom et Prénom / الاسم واللقب": "NEW MALE TRAINEE",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "1PP00476"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "2",
-        "Nom et Prénom / الاسم واللقب": "SOULEYMANE YACOUBA HABIBO",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "14PC26719"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "3",
-        "Nom et Prénom / الاسم واللقب": "KADRI ABDOU YACOUBA",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00072"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "4",
-        "Nom et Prénom / الاسم واللقب": "ABOUBACAR ABDOU ADAMOU",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "13PC69499"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "5",
-        "Nom et Prénom / الاسم واللقب": "ASSOUMANA ALIO M.NOURIDINE",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00802"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "6",
-        "Nom et Prénom / الاسم واللقب": "BOUBACAR ALKACHINE OMAR",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "14PC23124"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "7",
-        "Nom et Prénom / الاسم واللقب": "BACHIR MAHAMAN ABOUBACAR",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00706"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "8",
-        "Nom et Prénom / الاسم واللقب": "SEIDOU AMADOU ABDOU-SALAM",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00281"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "9",
-        "Nom et Prénom / الاسم واللقب": "BOUBACAR ADAMOU DJOUNAYDOU",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "12PC57592"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "10",
-        "Nom et Prénom / الاسم واللقب": "AMADOU YACOUBA MOCTAR",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "13PC37275"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "11",
-        "Nom et Prénom / الاسم واللقب": "MAHAMAN NAMAKA ABDOUL KADER",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP001712"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "12",
-        "Nom et Prénom / الاسم واللقب": "BOUBACAR BOULA ISMAEL",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP001022"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "13",
-        "Nom et Prénom / الاسم واللقب": "IBRAHIM LASSEINI MAMAN LAOUALI",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP003288"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "14",
-        "Nom et Prénom / الاسم واللقب": "HASSOUMI HIMA IMRANA",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP002878"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "15",
-        "Nom et Prénom / الاسم واللقب": "GARBA SALOU SAADOU",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP004964"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "16",
-        "Nom et Prénom / الاسم واللقب": "ABDOULKAKADRI ISSA RABILOU",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP001480"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "17",
-        "Nom et Prénom / الاسم واللقب": "NASSAMOU MASSALATCHI AWALI",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP004713"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "18",
-        "Nom et Prénom / الاسم واللقب": "SIRADJI ABOUBACAR BACHIR",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "13PC377963"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "19",
-        "Nom et Prénom / الاسم واللقب": "KABIROU ABDOULAYE ISMAILA",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00227"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "20",
-        "Nom et Prénom / الاسم واللقب": "MAIZOUMBOU DARI NASSIROU",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP004414"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "21",
-        "Nom et Prénom / الاسم واللقب": "ABABAKARI GOUMEY MOUKTAR",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP004148"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "22",
-        "Nom et Prénom / الاسم واللقب": "MOUSSA AMADOU ABDOUL WAHID",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP003509"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "23",
-        "Nom et Prénom / الاسم واللقب": "ADAMOU NAFOGA ISSA",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP003738"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "24",
-        "Nom et Prénom / الاسم واللقب": "IDE SEYNI KADRI ABDOUL WAHAB",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP003222"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "25",
-        "Nom et Prénom / الاسم واللقب": "ABDOULAY GORKO HAMADOU",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "13PC83126"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "26",
-        "Nom et Prénom / الاسم واللقب": "ABDOURAZAKOU SOUMAILA ALMOUSTAPHA",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "13PC63564"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "27",
-        "Nom et Prénom / الاسم واللقب": "HAMA KINDO SOULEYMANE",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "14PC11303"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "28",
-        "Nom et Prénom / الاسم واللقب": "MOUTARI GARBA FARID",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00458"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "29",
-        "Nom et Prénom / الاسم واللقب": "ZOULKIFIL ISSAKA HASSANE",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00280"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "30",
-        "Nom et Prénom / الاسم واللقب": "ALI HASSANE OUMAROU",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00165"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "31",
-        "Nom et Prénom / الاسم واللقب": "IDI DAN KOULOU MAHAMANE",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00483"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "32",
-        "Nom et Prénom / الاسم واللقب": "ABDOUL SALAM LAOUALI LOUCHE",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00285"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "33",
-        "Nom et Prénom / الاسم واللقب": "ABDOUL RACHID YAHAYA ISSA",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00416"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "34",
-        "Nom et Prénom / الاسم واللقب": "IBRAHIM ISSA BAARE ABDOU",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00313"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "35",
-        "Nom et Prénom / الاسم واللقب": "MAIZAMA ISSA MAHAMADOU MAYAKI",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00473"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "36",
-        "Nom et Prénom / الاسم واللقب": "ABDOUL RAZAK TIDJANI IBRAHIM",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00333"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "37",
-        "Nom et Prénom / الاسم واللقب": "ABDOULAYE HALILOU ISSA",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00119"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "38",
-        "Nom et Prénom / الاسم واللقب": "ISSOUFOU OUSMANE ISSOUFOU",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00408"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "39",
-        "Nom et Prénom / الاسم واللقب": "ISSOUFOU YAOU DJAROUMAI",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00087"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "40",
-        "Nom et Prénom / الاسم واللقب": "OUMAROU FAROUK ISSOUFOU",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00450"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "41",
-        "Nom et Prénom / الاسم واللقب": "ADAMOU FADI RIDOUANE",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01pp00207"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "42",
-        "Nom et Prénom / الاسم واللقب": "SAYADI MOHAMADOU ABDOUL RAZOK",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01pp00678"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "43",
-        "Nom et Prénom / الاسم واللقب": "ASSAMOU SAADOU MOHAMOU NOURA",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01pp01196"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "44",
-        "Nom et Prénom / الاسم واللقب": "ILLIYA ISSOUFOU MANSOUR",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00166"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "45",
-        "Nom et Prénom / الاسم واللقب": "HAMADOOU ABDOU AMARA",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00376"
-    },
-    {
-        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
-        "N°": "46",
-        "Nom et Prénom / الاسم واللقب": "DJIBRILLA IDRISSA ABOUBACAR",
-        "Genre / الجنس": "M",
-        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
-        "Wilaya / الولاية": "وهران",
-        "N° Passeport / جواز السفر": "01PP00417"
+        "Spécialité / التخصص": "Plomberie - ترصيص صحي وأنابيب بلاستيكية",
+        "Wilaya / الولاية": "تمنراست",
+        "N° Passeport / جواز السفر": "000000000"
     },
     {
         "Source_File": "El Oued _liste_stagiares (2).xlsx",
@@ -4670,13 +4341,655 @@ tbody tr:hover {
         "Remarque": "nan"
     },
     {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "1",
+        "Nom et Prénom / الاسم واللقب": "BOUBOUCAR BABA SOUNNA ABDOUL MADJID",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "1PP00476"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "2",
+        "Nom et Prénom / الاسم واللقب": "SOULEYMANE YACOUBA HABIBO",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "14PC26719"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "3",
+        "Nom et Prénom / الاسم واللقب": "KADRI ABDOU YACOUBA",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00072"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "4",
+        "Nom et Prénom / الاسم واللقب": "ABOUBACAR ABDOU ADAMOU",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "13PC69499"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "5",
+        "Nom et Prénom / الاسم واللقب": "ASSOUMANA ALIO M.NOURIDINE",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00802"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "6",
+        "Nom et Prénom / الاسم واللقب": "BOUBACAR ALKACHINE OMAR",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "14PC23124"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "7",
+        "Nom et Prénom / الاسم واللقب": "BACHIR MAHAMAN ABOUBACAR",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00706"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "8",
+        "Nom et Prénom / الاسم واللقب": "SEIDOU AMADOU ABDOU-SALAM",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00281"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "9",
+        "Nom et Prénom / الاسم واللقب": "BOUBACAR ADAMOU DJOUNAYDOU",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "12PC57592"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "10",
+        "Nom et Prénom / الاسم واللقب": "AMADOU YACOUBA MOCTAR",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "13PC37275"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "11",
+        "Nom et Prénom / الاسم واللقب": "MAHAMAN NAMAKA ABDOUL KADER",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP001712"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "12",
+        "Nom et Prénom / الاسم واللقب": "BOUBACAR BOULA ISMAEL",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP001022"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "13",
+        "Nom et Prénom / الاسم واللقب": "IBRAHIM LASSEINI MAMAN LAOUALI",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP003288"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "14",
+        "Nom et Prénom / الاسم واللقب": "HASSOUMI HIMA IMRANA",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP002878"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "15",
+        "Nom et Prénom / الاسم واللقب": "GARBA SALOU SAADOU",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP004964"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "16",
+        "Nom et Prénom / الاسم واللقب": "ABDOULKAKADRI ISSA RABILOU",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP001480"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "17",
+        "Nom et Prénom / الاسم واللقب": "NASSAMOU MASSALATCHI AWALI",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP004713"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "18",
+        "Nom et Prénom / الاسم واللقب": "SIRADJI ABOUBACAR BACHIR",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "13PC377963"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "19",
+        "Nom et Prénom / الاسم واللقب": "KABIROU ABDOULAYE ISMAILA",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00227"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "20",
+        "Nom et Prénom / الاسم واللقب": "MAIZOUMBOU DARI NASSIROU",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP004414"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "21",
+        "Nom et Prénom / الاسم واللقب": "ABABAKARI GOUMEY MOUKTAR",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP004148"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "22",
+        "Nom et Prénom / الاسم واللقب": "MOUSSA AMADOU ABDOUL WAHID",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP003509"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "23",
+        "Nom et Prénom / الاسم واللقب": "ADAMOU NAFOGA ISSA",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP003738"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "24",
+        "Nom et Prénom / الاسم واللقب": "IDE SEYNI KADRI ABDOUL WAHAB",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécatronique - ميكاترونيك وأنظمة مدمجة",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP003222"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "25",
+        "Nom et Prénom / الاسم واللقب": "ABDOULAY GORKO HAMADOU",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "13PC83126"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "26",
+        "Nom et Prénom / الاسم واللقب": "ABDOURAZAKOU SOUMAILA ALMOUSTAPHA",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "13PC63564"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "27",
+        "Nom et Prénom / الاسم واللقب": "HAMA KINDO SOULEYMANE",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "14PC11303"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "28",
+        "Nom et Prénom / الاسم واللقب": "MOUTARI GARBA FARID",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00458"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "29",
+        "Nom et Prénom / الاسم واللقب": "ZOULKIFIL ISSAKA HASSANE",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00280"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "30",
+        "Nom et Prénom / الاسم واللقب": "ALI HASSANE OUMAROU",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00165"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "31",
+        "Nom et Prénom / الاسم واللقب": "IDI DAN KOULOU MAHAMANE",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00483"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "32",
+        "Nom et Prénom / الاسم واللقب": "ABDOUL SALAM LAOUALI LOUCHE",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00285"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "33",
+        "Nom et Prénom / الاسم واللقب": "ABDOUL RACHID YAHAYA ISSA",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00416"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "34",
+        "Nom et Prénom / الاسم واللقب": "IBRAHIM ISSA BAARE ABDOU",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00313"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "35",
+        "Nom et Prénom / الاسم واللقب": "MAIZAMA ISSA MAHAMADOU MAYAKI",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00473"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "36",
+        "Nom et Prénom / الاسم واللقب": "ABDOUL RAZAK TIDJANI IBRAHIM",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00333"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "37",
+        "Nom et Prénom / الاسم واللقب": "ABDOULAYE HALILOU ISSA",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00119"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "38",
+        "Nom et Prénom / الاسم واللقب": "ISSOUFOU OUSMANE ISSOUFOU",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00408"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "39",
+        "Nom et Prénom / الاسم واللقب": "ISSOUFOU YAOU DJAROUMAI",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00087"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "40",
+        "Nom et Prénom / الاسم واللقب": "OUMAROU FAROUK ISSOUFOU",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00450"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "41",
+        "Nom et Prénom / الاسم واللقب": "ADAMOU FADI RIDOUANE",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01pp00207"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "42",
+        "Nom et Prénom / الاسم واللقب": "SAYADI MOHAMADOU ABDOUL RAZOK",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01pp00678"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "43",
+        "Nom et Prénom / الاسم واللقب": "ASSAMOU SAADOU MOHAMOU NOURA",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01pp01196"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "44",
+        "Nom et Prénom / الاسم واللقب": "ILLIYA ISSOUFOU MANSOUR",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00166"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "45",
+        "Nom et Prénom / الاسم واللقب": "HAMADOOU ABDOU AMARA",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00376"
+    },
+    {
+        "Source_File": "القائمة الاسمية للمتربصين لدولة النيجر.xlsx",
+        "N°": "46",
+        "Nom et Prénom / الاسم واللقب": "DJIBRILLA IDRISSA ABOUBACAR",
+        "Genre / الجنس": "M",
+        "Spécialité / التخصص": "Mécanique Réparation Auto - ميكانيك وتصليح المركبات",
+        "Wilaya / الولاية": "وهران",
+        "N° Passeport / جواز السفر": "01PP00417"
+    },
+    {
         "Source_File": "Etrangers_ TAM.xlsx",
         "N°": "95",
-        "Nom et Prénom / الاسم واللقب": "NEW MALE TRAINEE",
+        "Nom et Prénom / الاسم واللقب": "HAMZA - حمزة",
+        "Nom et Prénom / Nom et Prénom": "HAMZA - حمزة",
         "Genre / الجنس": "M",
-        "Spécialité / التخصص": "تكوين عام",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Tourisme - سياحة وأسفار",
+        "Spécialité / Spécialité": "Tourisme - سياحة وأسفار",
         "Wilaya / الولاية": "تمنراست",
-        "N° Passeport / جواز السفر": "000000000"
+        "Wilaya / Wilaya": "تمنراست",
+        "N° Passeport / جواز السفر": "",
+        "التخصص": "Tourisme - سياحة وأسفار",
+        "Spécialité": "Tourisme - سياحة وأسفار",
+        "wilaya": "تمنراست"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "1",
+        "Nom et Prénom / الاسم واللقب": "LAOUALI  SAHIROU ABOU ISSIHAKA",
+        "Nom et Prénom / Nom et Prénom": "LAOUALI  SAHIROU ABOU ISSIHAKA",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "2",
+        "Nom et Prénom / الاسم واللقب": "MOUSSA ADAMOU MAHAMADOU BACHIROU",
+        "Nom et Prénom / Nom et Prénom": "MOUSSA ADAMOU MAHAMADOU BACHIROU",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "3",
+        "Nom et Prénom / الاسم واللقب": "SANI  OUSMANE  HASSANE",
+        "Nom et Prénom / Nom et Prénom": "SANI  OUSMANE  HASSANE",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "4",
+        "Nom et Prénom / الاسم واللقب": "MOUSSA ALI AMADOU",
+        "Nom et Prénom / Nom et Prénom": "MOUSSA ALI AMADOU",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "5",
+        "Nom et Prénom / الاسم واللقب": "MOUSSA MOROU ABDOUL MADJID",
+        "Nom et Prénom / Nom et Prénom": "MOUSSA MOROU ABDOUL MADJID",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "6",
+        "Nom et Prénom / الاسم واللقب": "LAOUALI  MAMANE  ABDOUL MALIK",
+        "Nom et Prénom / Nom et Prénom": "LAOUALI  MAMANE  ABDOUL MALIK",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "7",
+        "Nom et Prénom / الاسم واللقب": "BELLO GARA  RILWANOU",
+        "Nom et Prénom / Nom et Prénom": "BELLO GARA  RILWANOU",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "8",
+        "Nom et Prénom / الاسم واللقب": "KANTA  OUSSEINI  MOUSSA",
+        "Nom et Prénom / Nom et Prénom": "KANTA  OUSSEINI  MOUSSA",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "9",
+        "Nom et Prénom / الاسم واللقب": "LAWALI  MANI  OUMAROU",
+        "Nom et Prénom / Nom et Prénom": "LAWALI  MANI  OUMAROU",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "10",
+        "Nom et Prénom / الاسم واللقب": "SANI  JARI  IBRAHIM",
+        "Nom et Prénom / Nom et Prénom": "SANI  JARI  IBRAHIM",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "11",
+        "Nom et Prénom / الاسم واللقب": "ADAMOU NIANDOU ABDOURAHMANE",
+        "Nom et Prénom / Nom et Prénom": "ADAMOU NIANDOU ABDOURAHMANE",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "12",
+        "Nom et Prénom / الاسم واللقب": "GALISSOU SOULEYMANE",
+        "Nom et Prénom / Nom et Prénom": "GALISSOU SOULEYMANE",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "13",
+        "Nom et Prénom / الاسم واللقب": "MAAROU ILLIASSOU  RABILOU",
+        "Nom et Prénom / Nom et Prénom": "MAAROU ILLIASSOU  RABILOU",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "14",
+        "Nom et Prénom / الاسم واللقب": "MOUSSA TAHIROU ZIRKIFIL",
+        "Nom et Prénom / Nom et Prénom": "MOUSSA TAHIROU ZIRKIFIL",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "15",
+        "Nom et Prénom / الاسم واللقب": "HASSANE GADO  ABDOURAHMANE",
+        "Nom et Prénom / Nom et Prénom": "HASSANE GADO  ABDOURAHMANE",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "16",
+        "Nom et Prénom / الاسم واللقب": "SANI  OUSMANE  OUSSEYNI",
+        "Nom et Prénom / Nom et Prénom": "SANI  OUSMANE  OUSSEYNI",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
+    },
+    {
+        "Source_File": "القائمة الإسمية للمتربصين الأجانب -النيجر-2026_121800.xlsx",
+        "Sheet_Name": "الجزائر",
+        "N°": "17",
+        "Nom et Prénom / الاسم واللقب": "HALADOU  MOUSSA  DLAMILOU",
+        "Nom et Prénom / Nom et Prénom": "HALADOU  MOUSSA  DLAMILOU",
+        "Genre / الجنس": "M",
+        "Genre / Genre": "M",
+        "Spécialité / التخصص": "Construction Métallique",
+        "Spécialité / Spécialité": "Construction Métallique",
+        "Wilaya / الولاية": "الجزائر العاصمة",
+        "Wilaya / Wilaya": "الجزائر العاصمة"
     },
     {
         "Source_File": "تكوين العمال المهنيين من دولة النيجر.xlsx",
@@ -5486,6 +5799,12 @@ tbody tr:hover {
     
     
     
+    
+    
+    
+    
+    
+    
 
 </script>
 <script>
@@ -5527,7 +5846,7 @@ var normalizedData = stagiairesData.map(function(item, index) {
     else if (rawGender === "F" || rawGender === "FEMININ" || rawGender === "FEMME" || rawGender === "FEMALE" || rawGender === "أنثى") gender = "F";
 
     // Determine Wilaya
-    var rawWilaya = (item["wilaya"] || item["Wilaya / Wilaya"] || item["الولايـة"] || item["Wilaya / الولاية"] || item["Wilaya"] || "").toString().trim().toLowerCase();
+    var rawWilaya = (item["wilaya"] || item["Wilaya / Wilaya"] || item["Wilaya / الولاية"] || item["الولايـة"] || item["الولاية"] || item["Wilaya"] || "").toString().trim().toLowerCase();
     var wilaya = "بومرداس";
     if (rawWilaya.includes("tebessa") || rawWilaya.includes("تبسة")) wilaya = "تبسة";
     else if (rawWilaya.includes("blida") || rawWilaya.includes("البليدة")) wilaya = "البليدة";
@@ -5535,7 +5854,7 @@ var normalizedData = stagiairesData.map(function(item, index) {
     else if (rawWilaya.includes("adrar") || rawWilaya.includes("أدرار")) wilaya = "أدرار";
     else if (rawWilaya.includes("oran") || rawWilaya.includes("وهران")) wilaya = "وهران";
     else if (rawWilaya.includes("alger") || rawWilaya.includes("الجزائر")) wilaya = "الجزائر العاصمة";
-    else if (rawWilaya.includes("tamanrasset") || rawWilaya.includes("تمنراست") || rawWilaya.includes("تsurراست")) wilaya = "تمنراست";
+    else if (rawWilaya.includes("tamanrasset") || rawWilaya.includes("تمنراست")) wilaya = "تمنراست";
     else if (rawWilaya.includes("ouargla") || rawWilaya.includes("ورقلة")) wilaya = "ورقلة";
     else if (rawWilaya.includes("ghardaia") || rawWilaya.includes("غرداية")) wilaya = "غرداية";
     if (item.sourceFile && item.sourceFile.includes("تكوين العمال المهنيين")) {
@@ -5547,7 +5866,7 @@ var normalizedData = stagiairesData.map(function(item, index) {
     if (!speciality) speciality = "Non spécifié";
 
     // Determine Passport
-    var passport = (item["N° Passeport / جواز السفر"] || item["جواز السفر"] || item["N° Passeport / N° Passeport"] || item["N° Passeport"] || "").toString().trim();
+    var passport = (item["N° Passeport / جواز السفر"] || item["N° Passeport"] || "").toString().trim();
 
     
     var wilayaMap = {
@@ -5555,7 +5874,6 @@ var normalizedData = stagiairesData.map(function(item, index) {
         "الجزائر": "Alger",
         "بومرداس": "Boumerdes",
         "تمنراست": "Tamanrasset",
-        "تsurراست": "Tamanrasset",
         "الوادي": "El Oued",
         "ورقلة": "Ouargla",
         "غرداية": "Ghardaia",
@@ -5565,14 +5883,7 @@ var normalizedData = stagiairesData.map(function(item, index) {
         "أدرار": "Adrar"
     };
     if(wilayaMap[wilaya]) wilaya = wilayaMap[wilaya];
-    
-    if(speciality === "تكوين عام") {
-        speciality = "Formation Générale";
-    } else {
-        // Strip Arabic chars and clean up
-        speciality = speciality.replace(/[\u0600-\u06FF]/g, '').replace(/[-\s]+$/, '').replace(/^[-\s]+/, '').trim();
-    }
-
+    if(speciality === "تكوين عام") speciality = "Formation Générale";
 
     return {
         id: index + 1,
@@ -5670,7 +5981,7 @@ function renderStats() {
             for(var i=0; i<topLimit; i++) {
                 topList.push(`<strong>${specsArray[i].name}</strong> (${specsArray[i].count} stagiaires)`);
             }
-            topSpecsHtml = " Les spécialités les plus demandées sont : " + topList.join(", et ") + ", reflétant l'alignement de nos programmes avec les besoins réels du marché et les attentes des partenaires.";
+            topSpecsHtml = " وتتصدر قائمة Spécialités les plus Demandées وإقبالاً كل من: " + topList.join(", et ") + ", reflétant l'alignement de nos programmes avec les besoins réels du marché et les attentes des partenaires.";
         }
 
         var summaryText = `Conformément aux Hautes Orientations de Monsieur le Président de la République, Abdelmadjid Tebboune, et dans le cadre du renforcement des liens de coopération bilatérale et du partenariat stratégique efficace qui unit la République Algérienne Démocratique et Populaire à la République sœur du Niger, nous avons le plaisir de vous présenter ce bilan statistique exhaustif et minutieux des stagiaires nigériens bénéficiant du système national de formation professionnelle.
@@ -5769,11 +6080,11 @@ Ce bilan sur le terrain n'est pas une simple compilation de chiffres, mais plut�
                         var specStats = wData.specialities[spec];
                         var genderInfo = '';
                         if (specStats.M > 0 && specStats.F > 0) {
-                            genderInfo = ' <br><small style="color:var(--text-muted)">(Hommes: ' + specStats.M + ', Femmes: ' + specStats.F + ')</small>';
+                            genderInfo = ' <br><small style="color:var(--text-muted)">(ذكور: ' + specStats.M + '، إناث: ' + specStats.F + ')</small>';
                         } else if (specStats.M > 0) {
-                            genderInfo = ' <br><small style="color:var(--text-muted)">(Hommes uniquement)</small>';
+                            genderInfo = ' <br><small style="color:var(--text-muted)">(ذكور فقط)</small>';
                         } else if (specStats.F > 0) {
-                            genderInfo = ' <br><small style="color:var(--text-muted)">(Femmes uniquement)</small>';
+                            genderInfo = ' <br><small style="color:var(--text-muted)">(إناث فقط)</small>';
                         }
                         specHtml += '<div class="spec-item" style="display:flex; justify-content:space-between; align-items:center;"><span>' + spec + genderInfo + '</span> <span class="badge">' + specStats.total + '</span></div>';
                     }
@@ -5781,13 +6092,13 @@ Ce bilan sur le terrain n'est pas une simple compilation de chiffres, mais plut�
                 
                 detailedHtml += `
                     <div class="wilaya-card glass-panel">
-                        <h3 class="wilaya-title"><i class="fa-solid fa-location-dot"></i> Wilaya ${wName}</h3>
+                        <h3 class="wilaya-title"><i class="fa-solid fa-location-dot"></i> ولاية ${wName}</h3>
                         <div class="wilaya-summary">
-                            <div class="w-stat">Total: <strong>${wData.total}</strong></div>
-                            <div class="w-stat">Hommes: <strong>${wData.M}</strong></div>
-                            <div class="w-stat">Femmes: <strong>${wData.F}</strong></div>
+                            <div class="w-stat">إجمالي: <strong>${wData.total}</strong></div>
+                            <div class="w-stat">ذكور: <strong>${wData.M}</strong></div>
+                            <div class="w-stat">إناث: <strong>${wData.F}</strong></div>
                         </div>
-                        <h4 class="spec-title">Spécialités:</h4>
+                        <h4 class="spec-title">Spécialitéات:</h4>
                         <div class="spec-list">
                             ${specHtml}
                         </div>
@@ -5815,11 +6126,11 @@ Ce bilan sur le terrain n'est pas une simple compilation de chiffres, mais plut�
                 
                 var genderSummary = '';
                 if (sData.M > 0 && sData.F > 0) {
-                    genderSummary = `Hommes: <strong>${sData.M}</strong> | Femmes: <strong>${sData.F}</strong>`;
+                    genderSummary = `ذكور: <strong>${sData.M}</strong> | إناث: <strong>${sData.F}</strong>`;
                 } else if (sData.M > 0) {
-                    genderSummary = `Hommes uniquement (<strong>${sData.M}</strong>)`;
+                    genderSummary = `ذكور فقط (<strong>${sData.M}</strong>)`;
                 } else if (sData.F > 0) {
-                    genderSummary = `Femmes uniquement (<strong>${sData.F}</strong>)`;
+                    genderSummary = `إناث فقط (<strong>${sData.F}</strong>)`;
                 } else {
                     genderSummary = `Non spécifié`;
                 }
@@ -5831,7 +6142,7 @@ Ce bilan sur le terrain n'est pas une simple compilation de chiffres, mais plut�
                             <div class="w-stat">Total des Stagiaires: <strong>${sData.total}</strong></div>
                             <div class="w-stat">${genderSummary}</div>
                         </div>
-                        <h4 class="spec-title">Wilayas:</h4>
+                        <h4 class="spec-title">الولايات:</h4>
                         <div class="spec-list">
                             ${wilayasHtml}
                         </div>
@@ -5883,7 +6194,7 @@ function renderCharts() {
         var count = item.data.total;
         var percentage = (count / maxSpecCount) * 100;
         var wilayasArr = Object.keys(item.data.wilayas);
-        var wilayasStr = wilayasArr.join(", ");
+        var wilayasStr = wilayasArr.join("، ");
         
         return `
             <div class="bar-item" style="margin-bottom: 5px; align-items: center;">
@@ -5901,7 +6212,7 @@ function renderCharts() {
     
     var specChartElem = document.getElementById('speciality-chart');
     if (specChartElem) {
-        specChartElem.innerHTML = specChartHtml || "<p>Aucune donnée</p>";
+        specChartElem.innerHTML = specChartHtml || "<p>لا توجد بيانات</p>";
     }
 
     var wilayaCounts = {};
@@ -5937,7 +6248,7 @@ function renderCharts() {
     }).join('');
 
     
-    document.getElementById('wilaya-chart').innerHTML = wilayaChartHtml || '<p style="color:var(--text-muted)">Aucune donnée</p>';
+    document.getElementById('wilaya-chart').innerHTML = wilayaChartHtml || '<p style="color:var(--text-muted)">لا توجد بيانات</p>';
 
     // Gender Chart (Using simple CSS mapping for representation)
     var males = filteredData.filter(function(d) { return d.gender === 'M'; }).length;
@@ -5986,7 +6297,7 @@ function renderTable() {
         tableBody.appendChild(tr);
     });
 
-    pageInfo.innerText = `Affichage de ${displayData.length} sur ${filteredData.length} au total`;
+    pageInfo.innerText = `يعرض ${displayData.length} من أصل ${filteredData.length} سجل`;
 }
 
 function applyFilters() {
@@ -6030,7 +6341,7 @@ window.onload = function() {
     try {
         init();
     } catch (e) {
-        document.getElementById('stats-container').innerHTML = '<div style="color:red; font-weight:bold; padding:20px; background:white; border-radius:10px;">Une erreur est survenue lors du chargement des données: ' + e.message + '</div>';
+        document.getElementById('stats-container').innerHTML = '<div style="color:red; font-weight:bold; padding:20px; background:white; border-radius:10px;">حدث خطأ أثناء تحميل البيانات: ' + e.message + '</div>';
     }
 };
 
